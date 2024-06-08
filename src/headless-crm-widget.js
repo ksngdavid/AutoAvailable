@@ -69,7 +69,7 @@ customElements.define(
           // => Get current accessToken from Desktop store
          /* const agentID = this.agentId;
           logger.info('AgentID is: ' + agentID);*/
-          logger.info('Headless Widget Log: RONA agent state detected');
+          logger.info('Headless Widget Log: Idle agent state detected. Sending webhook to move agent to Available state');
           this.sendWebhook();
  
           /*const ToggleAvailable = require('request').defaults({
