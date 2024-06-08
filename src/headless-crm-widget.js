@@ -62,8 +62,8 @@ customElements.define(
 
         logger.info('Headless Widget Log: Agent State is : ' + agentState);
 
-        //+++++++ Check for idle or Meeting ++++++++
-        if(agentState == "RONA" || agentState == "Meeting") {
+        //+++++++ Check for idle State ++++++++
+        if(agentState == "idle" || agentState == "Meeting") {
          // logger.info('Access Token is: ' + accessToken);
     
           // => Get current accessToken from Desktop store
