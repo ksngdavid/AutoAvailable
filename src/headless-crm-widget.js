@@ -235,6 +235,6 @@ customElements.define(
     }
   }
 
-  disconnectedCallback() { Desktop.agentContact.removeAllEventListeners(); }
+  disconnectedCallback() {;}
 
 });
