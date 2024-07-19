@@ -235,6 +235,9 @@ customElements.define(
     }
   }
 
-  disconnectedCallback() { Desktop.agentContact.removeAllEventListeners(); }
+  disconnectedCallback() { Desktop.agentContact.removeAllEventListeners(); 
+    logger.info('Headless Widget Log: Webcomponent disconnectedCallback function');
+  }
+
 
 });
