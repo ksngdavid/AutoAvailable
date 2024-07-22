@@ -32,13 +32,11 @@ customElements.define(
     logger.info('Headless Widget Log: init function');
     this.registerEventListeners();
   }
-  sleep = (delay) => new Promise((resolve) => setTimeout(resolve,delay));
   // This method registers all the event listeners supported by the JS SDK.
   // The event listeners are asynchronous and require handlers within each of the listeners.
   // Sample handlers below are only console logs as examples
   async registerEventListeners()
   {
-    await this.sleep(5000);
       //+++++++ Check for RONA ++++++++
       //const accessToken = await Desktop.actions.getToken();
       //+++++++ Check for RONA ++++++++
