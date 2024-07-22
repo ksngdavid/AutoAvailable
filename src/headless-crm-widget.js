@@ -17,6 +17,7 @@ customElements.define(
       this.attachShadow({ mode: 'open' });
     }
 
+    sleep = (delay) => new Promise((resolve) => setTimeout(resolve,delay));    
   // Mounting the headless widget and initializing
   async connectedCallback() 
   {
