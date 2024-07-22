@@ -17,13 +17,11 @@ customElements.define(
       this.attachShadow({ mode: 'open' });
     }
 
-    sleep = (delay) => new Promise((resolve) => setTimeout(resolve,delay));    
   // Mounting the headless widget and initializing
   async connectedCallback() 
   {
     this.init(); 
     logger.info('Headless Widget Log: Webcomponent connectedCallback function');
-    await this.sleep(1000); // Place a short 1s delay for switching teams
   }
 
 
@@ -52,6 +50,15 @@ customElements.define(
       if(isInitialized === false)
       {
         agentName = agentInfo.find(item => item.name === 'agentName').value;
+        if(agentState == "Idle" || agentState == "Meeting") {
+          // logger.info('Access Token is: ' + accessToken);
+     
+           // => Get current accessToken from Desktop store
+          /* const agentID = this.agentId;
+           logger.info('AgentID is: ' + agentID);*/
+           logger.info('Headless Widget Log: Idle agent state detected. Sending webhook to move agent to Available state');
+           this.sendWebhook();
+        }
       }
       else
       {
