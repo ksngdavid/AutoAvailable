@@ -22,6 +22,7 @@ customElements.define(
   {
     this.init(); 
     logger.info('Headless Widget Log: Webcomponent connectedCallback function');
+    await this.sleep(1000); // Place a short 1s delay for switching teams
   }
 
 
